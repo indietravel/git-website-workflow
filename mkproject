@@ -25,12 +25,12 @@ if [[ -e "$folder" ]]; then
   exit 1
 fi
 
-hubFolder="${folder}_hub.git"
+hubFolder="${folder}/hub.git"
 thisPath="${PWD}"
 
 printf "Creating $red$hubFolder$reset repo hub\n\n"
 
-mkdir "$hubFolder"
+mkdir -p "$hubFolder"
 cd "$hubFolder"
 
 git --bare init --shared=all
@@ -63,7 +63,7 @@ cd ../
 
 printf "Creating $red$folder$reset site folder\n\n"
 
-mkdir "$folder"
+mkdir -p "$folder/public_html"
 cd "$folder"
 
 git init --shared=all
