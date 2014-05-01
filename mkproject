@@ -63,8 +63,8 @@ cd ../
 
 printf "Creating $red$folder$reset site folder\n\n"
 
-mkdir -p "$folder/public_html"
-cd "$folder"
+mkdir -p "public_html"
+cd "public_html"
 
 git init --shared=all
 
