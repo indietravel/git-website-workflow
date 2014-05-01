@@ -85,6 +85,27 @@ git remote show hub
 touch .gitignore
 
 cat > .gitignore <<- _EOF_
+#Core WP files that might change
+.htaccess
+*wp-config.php
+*wp-content/uploads/*
+
+#Backup tools
+*backups*
+
+#w3tc caches, note *cache* removes core wp files!
+*w3tc*
+*w3-total*
+*wp-content/cache/*
+*wp-content/advanced-cache.php
+*wp-content/object-cache.php
+
+#sitemaps
+*sitemap.xml
+*sitemap.xml.gz
+*sitemap_index.xml
+
+#OSX files
 .DS_Store
 _EOF_
 
